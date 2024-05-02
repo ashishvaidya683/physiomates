@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Roboto&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>PHYSIOMATES</title>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="desktop-nav container">
+
+            <a href="/">
+                <div class="logo-container">
+                    <img src="./img/logo.jpg" alt="">
+                </div>
+            </a>
+
+            <a href="tel:+61 452 400 995">
+                <button>
+                    Call Now
+                </button>
+            </a>
+            
+        </div>
+
+        
+        <div class="mobile-nav">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.jpg" alt="">
+                </a>
+            </div>
+
+            <div class="mobile-number">
+                <a href="tel:+918939000065"><i class="fa-solid fa-phone"></i>+91 89390 00065</a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <section class="banner-section container">
+            <div class="wrapper">
+                <div class="left">
+                    <h2>
+                        Focusing on possibly the hottest topic in physiotherapy right now.
+                    </h2>
+                    <p>
+                        Discover "The Manual to Great Therapy" – Your Complete Guide to Mastering Physiotherapy Techniques. Transform Your Skills, Boost Your Career, and Help Your Clients Thrive. Join Our Courses Today!
+                    </p>
+                    <button onclick="openPopup()">
+                        Join Free membership Group
+                    </button>
+                </div>
+                <div class="right">
+                    <div class="img-container">
+                        <img src="./img/2150321632-removebg-preview.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="overview container">
+            <div class="wrapper">
+                <div class="left">
+                    <h3>
+                        The Manual To Great Therapy
+                    </h3>
+                    <p>
+                        Embark on a transformative journey with one of Australia's foremost courses tailored for private practice physiotherapists in 2023. Our focus is laser-sharp, honing in on the contemporary hot- button topic within the field of physiotherapy—the artful and judicious application of manual therapy.
+                    </p>
+                    <div class="info">
+                        <div class="elem">
+                            <i class="fa-solid fa-tag"></i>
+                            <span>₹14999</span><span class="discount-amt">₹25000</span>
+                        </div>
+
+                        <div class="elem">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>6 Months</span>
+                        </div>
+                        <div class="elem">
+                            <i class="fa-regular fa-file"></i>
+                            <span>26 Lessons</span>
+                        </div>
+
+                        <div class="elem">
+                                <button onclick="openPopup()">Free Register Now</button>
+                        </div>
+                    </div>
+                    <div class="notice">
+                        <span>Location: </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="wrapper">
+                        <div class="elem">
+                            <div class="heading" onclick="toggleContent(this)">
+                                <span>Chapter #1</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Case Study, History of MT, current best evidence - Kieran Richardson</li>
+                                    <li>Influence of Social Media</li>
+                                    <li>How does MT work?</li>
+                                    <li>Cortical Responses, Clinician and Patient Beliefs</li>
+                                    <li>How Often Should Patients Receive MT?</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <div class="heading" onclick="toggleContent(this)">
+                                <span>Chapter #2</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Manual Therapy Technique Assessment</li>
+                                    <li>Low Back-Related Pain Treatment</li>
+                                    <li>Alternative Lumbar</li>
+                                    <li>Lumbar Manipulation Treatment</li>
+                                    <li>Lumbar Rotation with Straight Leg Raise</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <div class="heading" onclick="toggleContent(this)">
+                                <span>Chapter #3</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Straight Leg Raise Mobilisation with Movement Treatment</li>
+                                    <li>Lumbar Standing</li>
+                                    <li>Lumbar Self-Treatment Mulligan Style Treatment</li>
+                                    <li>Slump and Leg Pain Assessment</li>
+                                    <li>Low Back - Related Leg Pain Treatment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <div class="heading" onclick="toggleContent(this)">
+                                <span>Chapter #4</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Sciatica Discussion</li>
+                                    <li>Sacroiliac Joint Treatment</li>
+                                    <li>Hip Treatment</li>
+                                    <li>Knee & Ankle Treatment</li>
+                                    <li>Cervical APs, CT Junction & Headache Treatment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="elem">
+                            <div class="heading" onclick="toggleContent(this)">
+                                <span>Chapter #5</span>
+                                <i class="fa-solid fa-caret-down"></i>
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>Cervical Upslope & Downslope Treatment</li>
+                                    <li>Thoracic Spine Treatment</li>
+                                    <li>Shoulder Treatment</li>
+                                    <li>Headache & Neck Related Upper Limb Pain Treatment</li>
+                                    <li>Elbow Treatment</li>
+                                    <li>Case Study & Conclusion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <section class="trainer-section container">
+        <h2>Meet the trainer of this course !</h2>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="img-container">
+                        <img src="./img/fmF7ntsKTGeUrjuiooSe_Course title here.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <p>
+                        James Schomburgk is the owner of The Second Visit, an international clinical education company, and a lecturer in Sports and Orthopaedic Medicine at the University of Adelaide.
+                        He's been recognized for his leadership in physiotherapy and has extensive experience as a clinician, educator, and advisor.
+                    </p>
+                    <p>
+                        James is passionate about translating research into practical clinical skills and is known for his ability to simplify complex concepts in physiotherapy. He shares his expertise through keynote speaking and presenting courses worldwide on various topics in musculoskeletal health.
+                    </p>
+                </div>
+            </div>
+       </section>
+
+       <section class="review-section container">
+        <h2>Review from our students</h2>
+        
+        <div class="card-container">
+            <div class="card">
+                <div class="top-container">
+                    <h3>roberta villar</h3>
+                    <p>
+                        I hod the greatest time attending
+                        "Manual to Great Therapy with James Schomburgk this weekend, | couldn't recommend it enough. Thanks for being such a generous educator, James.
+                    </p>
+                </div>
+                <div class="bottom-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="top-container">
+                    <h3>charmi k.</h3>
+                    <p>
+                        Manual therapy plays a major role in treatment of patients specially when you want to become a Physio in Australia.
+                        Following James MTGT course had a huge impact on Employers getting to know me, . making me stand out of the rest. James is o great teacher, a great mentor and the set of manual therapy skills you develop by attending to his course is all about evidence based practice that wal take you one step closer to the smooth transition of your first job in Australla as a Physiotheropist
+                    </p>
+                </div>
+                <div class="bottom-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="top-container">
+                    <h3>erica eccleston</h3>
+                    <p>
+                        Highly recommend this course I sent all my physics to it and they found it really helpful. It was great to leain manual techniques but to also.leam treatment planning James Schomburgk yep If's a must for private practice ana l'a have to say that if i was looking for an international physio and s orcone had done this course olready lI would give them on davantage
+                    </p>
+                </div>
+                <div class="bottom-container">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <section class="container"></section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container container">
+            <div class="footer-wrapper">
+                <div class="col">
+                    <div class="img-container">
+                        <img src="./img/logo.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col">
+                  <h2>Contact</h2>  
+
+                  <div class="info">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+61 452 400 995</span>
+                  </div>
+                  <div class="info">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>example@gmail.com</span>
+                  </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="left">
+                    <p>© 2024 PHYSIOMATES. All rights reserved.</p>
+                </div>
+                <div class="right">
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="contact-popup" class="popup">
+        <div id="form-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+
+            <div class="heading">
+                <div class="img-container">
+                    <img src="./img/logo.jpg" alt="">
+                </div>
+                <h2>Register Now!</h2>
+            </div>
+          
+            <form onsubmit="reset(); return false">
+                  <input type="text" placeholder="Enter your name" name="name" id="name" required>
+                  <input type="email" placeholder="Enter your Email Address" name="email" id="email" required>
+                  <input type="number" placeholder="Enter your Phone Number" name="phone" id="phone" required>
+                  
+                  <button onclick="sendEmail()" type="submit" >Submit</button>
+              
+          </form>
+
+        </div>
+
+        <div id="thankyou-content" >
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Registration Successfull</h2>
+            <p>
+                Thank you for registering for our course.<br> To join our free membership group, please use the following link. <br>
+            </p>
+            <div class="link">
+                <a href="https://m.facebook.com/groups/834913738268401/?ref=share&mibextid=S66gvF">International Physiotherapy Registration</a> <br>
+                <a href="https://www.facebook.com/groups/496127592591915/?ref=share&mibextid=S66gvF">Employment in Australia</a> <br>
+            </div>
+            <i class="fa-regular fa-circle-check"></i>
+            <h5>Check Email !</h5>
+            <p>
+                We've sent the payment details to your registered email address.           
+                If you have any questions, feel free to contact us. <br>
+            </p>
+        </div>
+    </div>
+      
+    <div class="WhatsApp-btn">
+        <a target="_blank" href="https://wa.me/+61 452 400 995?text=Hello, I want to enquiry about The Manual To Great Therapy Course">
+            <div class="img-container">
+                <img src="./img/whatsapp_5968841.png" alt="">
+            </div>
+        </a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
