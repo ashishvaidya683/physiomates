@@ -238,7 +238,6 @@
         }
     }
 
-
     // Overview
     .overview{
         display: flex;
@@ -469,10 +468,6 @@
     }
 
     .trainer-section{
-        h2{
-            text-align: center;
-            padding-bottom: 20px;
-        }
         .wrapper{
             display: flex;
             flex-direction: row;
@@ -507,10 +502,7 @@
     }
     @media screen and (max-width:768px) {
         .trainer-section{
-            h2{
-                text-align: center;
-                padding-bottom: 20px;
-            }
+
             .wrapper{
                 display: flex;
                 flex-direction: column;
@@ -546,10 +538,6 @@
     }
 
     .review-section{
-        h2{
-            text-align: center;
-            padding-bottom: 20px;
-        }
 
         .card-container{
             display: grid;
@@ -591,10 +579,6 @@
     }
     @media screen and (max-width:768px) {
         .review-section{
-            h2{
-                text-align: center;
-                padding-bottom: 20px;
-            }
     
             .card-container{
                 display: grid;
@@ -641,9 +625,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h2{
-            text-align: center;
-        }
 
         .wrapper{
             display: flex;
@@ -652,7 +633,7 @@
             align-items: center;
             justify-content: center;
             gap: 60px;
-            background-color: #A6DCEF;
+            background-color: $secondary-color;
             padding: 50px;
             border-radius: 50px 0 50px 0;
 
@@ -685,9 +666,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            h2{
-                text-align: center;
-            }
+
     
             .wrapper{
                 display: flex;
@@ -696,7 +675,7 @@
                 align-items: center;
                 justify-content: center;
                 gap: 40px;
-                background-color: #A6DCEF;
+                background-color: $secondary-color;
                 padding: 30px;
                 border-radius: 50px 0 50px 0;
     
@@ -1133,12 +1112,17 @@ button{
     }
 }
 
+.title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
 
 .WhatsApp-btn{
     position: fixed;
     z-index: 100000;
-    bottom: 20%;
-    left: 70%;
+    bottom: 2%;
+    right: 5%;
     cursor: pointer;
 
     .img-container{

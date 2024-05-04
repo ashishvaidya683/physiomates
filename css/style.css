@@ -418,10 +418,6 @@ main .overview .wrapper .right .wrapper .elem .content ul li {
     padding-bottom: 10px;
   }
 }
-main .trainer-section h2 {
-  text-align: center;
-  padding-bottom: 20px;
-}
 main .trainer-section .wrapper {
   display: flex;
   flex-direction: row;
@@ -453,10 +449,6 @@ main .trainer-section .wrapper .right p {
   line-height: 25px;
 }
 @media screen and (max-width: 768px) {
-  main .trainer-section h2 {
-    text-align: center;
-    padding-bottom: 20px;
-  }
   main .trainer-section .wrapper {
     display: flex;
     flex-direction: column;
@@ -487,10 +479,6 @@ main .trainer-section .wrapper .right p {
     font-size: 20px;
     line-height: 25px;
   }
-}
-main .review-section h2 {
-  text-align: center;
-  padding-bottom: 20px;
 }
 main .review-section .card-container {
   display: grid;
@@ -526,10 +514,6 @@ main .review-section .card-container .card .bottom-container i {
   font-size: 20px;
 }
 @media screen and (max-width: 768px) {
-  main .review-section h2 {
-    text-align: center;
-    padding-bottom: 20px;
-  }
   main .review-section .card-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -570,9 +554,6 @@ main .about-us {
   justify-content: center;
   align-items: center;
 }
-main .about-us h2 {
-  text-align: center;
-}
 main .about-us .wrapper {
   display: flex;
   width: 90%;
@@ -580,7 +561,7 @@ main .about-us .wrapper {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  background-color: #A6DCEF;
+  background-color: #F6F6F6;
   padding: 50px;
   border-radius: 50px 0 50px 0;
 }
@@ -609,9 +590,6 @@ main .about-us .wrapper .right p {
     justify-content: center;
     align-items: center;
   }
-  main .about-us h2 {
-    text-align: center;
-  }
   main .about-us .wrapper {
     display: flex;
     width: 100%;
@@ -619,7 +597,7 @@ main .about-us .wrapper .right p {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background-color: #A6DCEF;
+    background-color: #F6F6F6;
     padding: 30px;
     border-radius: 50px 0 50px 0;
   }
@@ -999,11 +977,17 @@ button a {
   color: #fff;
 }
 
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+
 .WhatsApp-btn {
   position: fixed;
   z-index: 100000;
-  bottom: 20%;
-  left: 70%;
+  bottom: 2%;
+  right: 5%;
   cursor: pointer;
 }
 .WhatsApp-btn .img-container {
