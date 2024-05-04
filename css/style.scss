@@ -652,7 +652,7 @@
             align-items: center;
             justify-content: center;
             gap: 60px;
-            background-color: $primary-color;
+            background-color: #A6DCEF;
             padding: 50px;
             border-radius: 50px 0 50px 0;
 
@@ -660,14 +660,10 @@
                 .img-container{
                     width: 400px;
                     height: 400px;
-                    // background-color: $primary-color;
-                    // padding-right: 20px;
-                    // padding-bottom: 20px;
 
                     img{
                         width: 100%;
                         height: 100%;
-                        // background-color: #fff;
                         object-fit: cover;
                     }
                 }
@@ -676,8 +672,8 @@
             .right{
                 flex: 1;
                 p{
-                    color: #fff;
-                    font-weight: 400;
+                    color: #000;
+                    font-weight: 500;
                     font-size: 18px;
                 }
             }
@@ -700,22 +696,18 @@
                 align-items: center;
                 justify-content: center;
                 gap: 40px;
-                background-color: $primary-color;
+                background-color: #A6DCEF;
                 padding: 30px;
                 border-radius: 50px 0 50px 0;
     
                 .left{
                     .img-container{
                         width: 100%;
-                        height: 200px;
-                        // background-color: $primary-color;
-                        // padding-right: 20px;
-                        // padding-bottom: 20px;
+                        height: 250px;
     
                         img{
                             width: 100%;
                             height: 100%;
-                            // background-color: #fff;
                             object-fit: contain;
                         }
                     }
@@ -724,10 +716,9 @@
                 .right{
                     flex: 1;
                     p{
-                        color: #fff;
+                        color: #000;
                         font-weight: 400;
                         font-size: 16px;
-                        text-align: center;
                     }
                 }
             }
@@ -784,8 +775,51 @@
   }
   @media screen and (max-width:786px) {
     footer{
-        display: none;
-    }
+        background-color: $secondary-color;
+    
+        .footer-container{
+            padding: 20px 30px 10px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .footer-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-bottom: 1px solid #000;
+                padding-bottom: 20px;
+    
+                .col{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+            .footer-bottom{
+                padding-top: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+        
+                .left{
+                    p{
+                        font-size: 14px;
+                        line-height: 19px;
+                    }
+                }
+                .right{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    i{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+      }
   }
 
 .popup {
@@ -1103,8 +1137,8 @@ button{
 .WhatsApp-btn{
     position: fixed;
     z-index: 100000;
-    bottom: 5%;
-    right: 2%;
+    bottom: 20%;
+    left: 70%;
     cursor: pointer;
 
     .img-container{

@@ -580,7 +580,7 @@ main .about-us .wrapper {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  background-color: #002C6A;
+  background-color: #A6DCEF;
   padding: 50px;
   border-radius: 50px 0 50px 0;
 }
@@ -598,8 +598,8 @@ main .about-us .wrapper .right {
   flex: 1;
 }
 main .about-us .wrapper .right p {
-  color: #fff;
-  font-weight: 400;
+  color: #000;
+  font-weight: 500;
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
@@ -619,13 +619,13 @@ main .about-us .wrapper .right p {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background-color: #002C6A;
+    background-color: #A6DCEF;
     padding: 30px;
     border-radius: 50px 0 50px 0;
   }
   main .about-us .wrapper .left .img-container {
     width: 100%;
-    height: 200px;
+    height: 250px;
   }
   main .about-us .wrapper .left .img-container img {
     width: 100%;
@@ -637,10 +637,9 @@ main .about-us .wrapper .right p {
     flex: 1;
   }
   main .about-us .wrapper .right p {
-    color: #fff;
+    color: #000;
     font-weight: 400;
     font-size: 16px;
-    text-align: center;
   }
 }
 
@@ -687,7 +686,44 @@ footer .footer-container .footer-bottom .right i {
 
 @media screen and (max-width: 786px) {
   footer {
-    display: none;
+    background-color: #F6F6F6;
+  }
+  footer .footer-container {
+    padding: 20px 30px 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  footer .footer-container .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+  }
+  footer .footer-container .footer-wrapper .col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer .footer-container .footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer .footer-container .footer-bottom .left p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  footer .footer-container .footer-bottom .right {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  footer .footer-container .footer-bottom .right i {
+    font-size: 25px;
   }
 }
 .popup {
@@ -966,8 +1002,8 @@ button a {
 .WhatsApp-btn {
   position: fixed;
   z-index: 100000;
-  bottom: 5%;
-  right: 2%;
+  bottom: 20%;
+  left: 70%;
   cursor: pointer;
 }
 .WhatsApp-btn .img-container {
