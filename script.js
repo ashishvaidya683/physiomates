@@ -69,7 +69,7 @@ function sendEmail() {
                       Host: "smtp.elasticemail.com",
                       Username: "promotionalrealestate@gmail.com",
                       Password: "7D34D9615EE769A77A06F00B1EB25BDF1F86",
-                      To: 'ashishvaidya683@gmail.com',
+                      To: 'admin@physiomates.com.au',
                       From: "promotionalrealestate@gmail.com",
                       Subject: "Enquiry for UDYANA",
                       Body: adminEmailContent,
@@ -92,22 +92,18 @@ function sendEmail() {
       });
 }
 
+function showTab(tabId) {
+    // Hide all tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
 
+    // Remove 'active' class from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
 
-function toggleContent(heading) {
-  const content = heading.nextElementSibling; /* Get the content to toggle */
-  const icon = heading.querySelector("i"); /* Get the caret icon */
-
-  if (content.style.display === "none" || content.style.display === "") {
-      content.style.display = "block"; /* Show the content */
-      icon.classList.add("rotated"); /* Rotate the caret icon */
-  } else {
-      content.style.display = "none"; /* Collapse the content */
-      setTimeout(() => {
-          content.style.display = "none"; /* Hide after transition */
-      }, 300); /* Match the transition duration */
-      icon.classList.remove("rotated"); /* Reset the caret icon */
-  }
+    // Show the selected tab content and set the tab as active
+    document.getElementById(tabId).classList.add('active');
+    event.target.classList.add('active');
 }
-
-
