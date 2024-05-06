@@ -1,4 +1,38 @@
 
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    hashNavigation: {
+      watchState: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
   function openPopup() {
     document.getElementById('contact-popup').style.display = 'block';
   }
@@ -107,3 +141,32 @@ function showTab(tabId) {
     document.getElementById(tabId).classList.add('active');
     event.target.classList.add('active');
 }
+
+// Set the end date for the countdown (2 weeks from now)
+const twoWeeks = 1000 * 60 * 60 * 24 * 14; // 2 weeks in milliseconds
+const endDate = new Date(Date.now() + twoWeeks);
+
+function updateCountdown() {
+    const now = new Date();
+    const timeRemaining = endDate - now;
+
+    if (timeRemaining <= 0) {
+        // Offer has ended, change the price
+        document.getElementById("price").textContent = "25000";
+        document.getElementById("time-left").textContent = "Offer expired";
+        return;
+    }
+
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    document.getElementById("time-left").textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    setTimeout(updateCountdown, 1000); // Update every second
+}
+
+// Start the countdown
+updateCountdown();

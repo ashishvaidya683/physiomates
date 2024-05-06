@@ -247,6 +247,7 @@ main .overview .wrapper .left .info {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
+  gap: 50px;
 }
 main .overview .wrapper .left .info .elem {
   display: flex;
@@ -273,6 +274,26 @@ main .overview .wrapper .left button {
   border: 0px;
   color: #fff;
   outline: 0px;
+  margin-bottom: 20px;
+}
+main .overview .wrapper .left .countdown {
+  text-align: center;
+  border: 2px solid #002C6A; /* Border to match text color */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+}
+main .overview .wrapper .left .countdown h1 {
+  margin: 0;
+  font-size: 2em;
+}
+main .overview .wrapper .left .countdown p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+main .overview .wrapper .left .countdown .time {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #002C6A; /* Deep blue */
 }
 main .overview .wrapper .left .notice {
   margin-top: 20px;
@@ -483,12 +504,11 @@ main .trainer-section .wrapper .right p {
     line-height: 25px;
   }
 }
-main .review-section .card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+main .review-section .swiper .swiper-wrapper {
+  height: 320px;
 }
-main .review-section .card-container .card {
+main .review-section .swiper .swiper-wrapper .swiper-slide .card {
+  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -496,25 +516,28 @@ main .review-section .card-container .card {
   padding: 20px 30px;
   border-radius: 10px;
 }
-main .review-section .card-container .card .top-container h3 {
+main .review-section .swiper .swiper-wrapper .swiper-slide .card .top-container h3 {
   text-transform: uppercase;
   color: #002C6A;
   font-size: 22px;
   line-height: 27px;
   padding-bottom: 15px;
 }
-main .review-section .card-container .card .top-container p {
+main .review-section .swiper .swiper-wrapper .swiper-slide .card .top-container p {
   font-size: 16px;
   line-height: 21px;
 }
-main .review-section .card-container .card .bottom-container {
+main .review-section .swiper .swiper-wrapper .swiper-slide .card .bottom-container {
   display: flex;
   flex-direction: row;
   justify-content: end;
 }
-main .review-section .card-container .card .bottom-container i {
+main .review-section .swiper .swiper-wrapper .swiper-slide .card .bottom-container i {
   color: #F7DB32;
   font-size: 20px;
+}
+main .review-section .swiper .swiper-button-next, main .review-section .swiper .swiper-button-prev {
+  color: #002C6A;
 }
 @media screen and (max-width: 768px) {
   main .review-section .card-container {
