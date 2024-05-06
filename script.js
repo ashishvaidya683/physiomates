@@ -1,6 +1,7 @@
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
+    loop:true,
     spaceBetween: 30,
     hashNavigation: {
       watchState: true,
@@ -142,16 +143,30 @@ function showTab(tabId) {
     event.target.classList.add('active');
 }
 
-// Set the end date for the countdown (2 weeks from now)
-const twoWeeks = 1000 * 60 * 60 * 24 * 14; // 2 weeks in milliseconds
-const endDate = new Date(Date.now() + twoWeeks);
+
+
+// Calculate two weeks in milliseconds
+const twoWeeks = 1000 * 60 * 60 * 24 * 14;
+
+// Get the stored end date from localStorage
+let storedEndDate = localStorage.getItem('countdownEndDate');
+
+// If there's no stored end date, calculate a new one and store it
+if (!storedEndDate) {
+    const endDate = new Date(Date.now() + twoWeeks).toISOString();
+    localStorage.setItem('countdownEndDate', endDate);
+    storedEndDate = endDate;
+}
+
+// Convert the stored end date to a Date object
+const endDate = new Date(storedEndDate);
 
 function updateCountdown() {
     const now = new Date();
     const timeRemaining = endDate - now;
 
     if (timeRemaining <= 0) {
-        // Offer has ended, change the price
+        // If the offer has ended, change the price
         document.getElementById("price").textContent = "25000";
         document.getElementById("time-left").textContent = "Offer expired";
         return;

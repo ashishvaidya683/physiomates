@@ -164,7 +164,7 @@ main .banner-section .wrapper .right .img-container img {
     justify-content: space-around;
     align-items: center;
     background-color: #002C6A;
-    padding: 15px 25px;
+    padding: 55px 25px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -198,7 +198,9 @@ main .banner-section .wrapper .right .img-container img {
   main .banner-section .wrapper .right {
     position: absolute;
     flex: 1;
-    right: -80px;
+    right: -200px;
+    bottom: 0;
+    opacity: 0.8;
   }
   main .banner-section .wrapper .right .img-container {
     width: 100%;
@@ -211,9 +213,63 @@ main .banner-section .wrapper .right .img-container img {
        object-fit: contain;
   }
 }
-main .intro p {
+main .intro .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+main .intro .wrapper .left {
+  flex: 1;
+}
+main .intro .wrapper .left .img-container {
+  width: 100%;
+  height: 500px;
+}
+main .intro .wrapper .left .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px 0 30px 0;
+}
+main .intro .wrapper .right {
+  flex: 1;
+}
+main .intro .wrapper .right p {
   text-align: center;
   font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  main .intro .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  main .intro .wrapper .left {
+    flex: 1;
+  }
+  main .intro .wrapper .left .img-container {
+    width: 100%;
+    height: 500px;
+  }
+  main .intro .wrapper .left .img-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px 0 30px 0;
+  }
+  main .intro .wrapper .right {
+    flex: 1;
+  }
+  main .intro .wrapper .right p {
+    text-align: center;
+    font-size: 20px;
+  }
 }
 main .overview {
   display: flex;
@@ -279,16 +335,23 @@ main .overview .wrapper .left button {
 main .overview .wrapper .left .countdown {
   text-align: center;
   border: 2px solid #002C6A; /* Border to match text color */
-  padding: 10px;
+  padding: 10px 25px;
   border-radius: 10px; /* Rounded corners */
 }
 main .overview .wrapper .left .countdown h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 30px;
+  line-height: 35px;
 }
 main .overview .wrapper .left .countdown p {
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 1.2em;
+}
+main .overview .wrapper .left .countdown .line-through {
+  text-decoration: line-through;
+  font-size: 22px;
+  font-weight: 600;
+  color: red;
 }
 main .overview .wrapper .left .countdown .time {
   font-size: 2.5em;
@@ -311,22 +374,31 @@ main .overview .wrapper .right {
   flex: 1;
   /* Styling for the tab content */
 }
-main .overview .wrapper .right .tab {
+main .overview .wrapper .right .tab-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .overview .wrapper .right .tab-container .tab {
+  width: 100%;
   display: inline-block;
   padding: 10px;
-  background-color: lightgray;
-  border: 1px solid #ccc;
+  background-color: #F6F6F6;
   cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s;
 }
-main .overview .wrapper .right .tab.active {
-  background-color: white;
+main .overview .wrapper .right .tab-container .tab.active {
+  background-color: #002C6A;
+  color: #F6F6F6;
   border-bottom: none;
   font-weight: bold;
 }
 main .overview .wrapper .right .tab-content {
   display: none;
   padding: 15px;
-  border: 1px solid #ccc;
+  margin-top: 25px;
+  border-left: 3px groove #002C6A;
   background-color: white;
 }
 main .overview .wrapper .right .tab-content.active {
@@ -505,7 +577,7 @@ main .trainer-section .wrapper .right p {
   }
 }
 main .review-section .swiper .swiper-wrapper {
-  height: 320px;
+  height: 400px;
 }
 main .review-section .swiper .swiper-wrapper .swiper-slide .card {
   height: inherit;
@@ -540,12 +612,11 @@ main .review-section .swiper .swiper-button-next, main .review-section .swiper .
   color: #002C6A;
 }
 @media screen and (max-width: 768px) {
-  main .review-section .card-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
+  main .review-section .swiper .swiper-wrapper {
+    height: 550px;
   }
-  main .review-section .card-container .card {
+  main .review-section .swiper .swiper-wrapper .swiper-slide .card {
+    height: inherit;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -553,25 +624,28 @@ main .review-section .swiper .swiper-button-next, main .review-section .swiper .
     padding: 20px 30px;
     border-radius: 10px;
   }
-  main .review-section .card-container .card .top-container h3 {
+  main .review-section .swiper .swiper-wrapper .swiper-slide .card .top-container h3 {
     text-transform: uppercase;
     color: #002C6A;
     font-size: 22px;
     line-height: 27px;
     padding-bottom: 15px;
   }
-  main .review-section .card-container .card .top-container p {
+  main .review-section .swiper .swiper-wrapper .swiper-slide .card .top-container p {
     font-size: 16px;
     line-height: 21px;
   }
-  main .review-section .card-container .card .bottom-container {
+  main .review-section .swiper .swiper-wrapper .swiper-slide .card .bottom-container {
     display: flex;
     flex-direction: row;
     justify-content: end;
   }
-  main .review-section .card-container .card .bottom-container i {
+  main .review-section .swiper .swiper-wrapper .swiper-slide .card .bottom-container i {
     color: #F7DB32;
     font-size: 20px;
+  }
+  main .review-section .swiper .swiper-button-next, main .review-section .swiper .swiper-button-prev {
+    color: #002C6A;
   }
 }
 main .about-us {
@@ -584,29 +658,44 @@ main .about-us .wrapper {
   display: flex;
   width: 90%;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
   justify-content: center;
-  gap: 60px;
-  background-color: #F6F6F6;
-  padding: 50px;
+  gap: 100px;
+  padding: 20px 50px 50px 50px;
   border-radius: 50px 0 50px 0;
+}
+main .about-us .wrapper .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
 }
 main .about-us .wrapper .left .img-container {
   width: 400px;
   height: 400px;
+  background-color: #F6F6F6;
+  border-radius: 45%;
 }
 main .about-us .wrapper .left .img-container img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .about-us .wrapper .left h2 {
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: normal;
 }
 main .about-us .wrapper .right {
-  flex: 1;
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 2px groove #002C6A;
 }
 main .about-us .wrapper .right p {
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
@@ -618,18 +707,26 @@ main .about-us .wrapper .right p {
   }
   main .about-us .wrapper {
     display: flex;
-    width: 100%;
+    width: 90%;
     flex-direction: column;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    gap: 40px;
-    background-color: #F6F6F6;
-    padding: 30px;
+    gap: 30px;
+    padding: 0px;
     border-radius: 50px 0 50px 0;
   }
+  main .about-us .wrapper .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+  }
   main .about-us .wrapper .left .img-container {
-    width: 100%;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    background-color: #F6F6F6;
+    border-radius: 45%;
   }
   main .about-us .wrapper .left .img-container img {
     width: 100%;
@@ -637,13 +734,22 @@ main .about-us .wrapper .right p {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  main .about-us .wrapper .left h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: normal;
+  }
   main .about-us .wrapper .right {
-    flex: 1;
+    margin-top: 0px;
+    padding-top: 30px;
+    border-top: 2px groove #002C6A;
   }
   main .about-us .wrapper .right p {
     color: #000;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
