@@ -304,11 +304,11 @@ main .overview .wrapper .left p {
 }
 main .overview .wrapper .left .info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+  gap: 10px;
   padding-bottom: 30px;
-  gap: 50px;
 }
 main .overview .wrapper .left .info .elem {
   display: flex;
@@ -322,7 +322,10 @@ main .overview .wrapper .left .info .elem i {
 }
 main .overview .wrapper .left .info .elem span {
   font-size: 20px;
-  text-decoration: underline;
+}
+main .overview .wrapper .left .info .elem span a {
+  text-decoration: underline !important;
+  color: #002C6A;
 }
 main .overview .wrapper .left .info .elem .discount-amt {
   text-decoration: line-through;
