@@ -316,14 +316,14 @@ main .overview .wrapper .left .info .elem i {
 }
 main .overview .wrapper .left .info .elem span {
   font-size: 20px;
+  text-decoration: underline;
 }
 main .overview .wrapper .left .info .elem .discount-amt {
   text-decoration: line-through;
   font-weight: 500;
 }
 main .overview .wrapper .left button {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   padding: 10px 20px;
   border-radius: 10px;
   background-color: #002C6A;
@@ -333,6 +333,7 @@ main .overview .wrapper .left button {
   margin-bottom: 20px;
 }
 main .overview .wrapper .left .countdown {
+  width: 100%;
   text-align: center;
   border: 2px solid #002C6A; /* Border to match text color */
   padding: 10px 25px;
@@ -342,6 +343,7 @@ main .overview .wrapper .left .countdown h1 {
   margin: 0;
   font-size: 30px;
   line-height: 35px;
+  text-transform: capitalize;
 }
 main .overview .wrapper .left .countdown p {
   margin: 5px 0;
@@ -362,7 +364,7 @@ main .overview .wrapper .left .notice {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 5px;
 }
 main .overview .wrapper .left .notice span {
@@ -611,6 +613,26 @@ main .review-section .swiper .swiper-wrapper .swiper-slide .card .bottom-contain
 main .review-section .swiper .swiper-button-next, main .review-section .swiper .swiper-button-prev {
   color: #002C6A;
 }
+main .review-section .register-btn {
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main .review-section .register-btn button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #002C6A;
+  border: 0px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+  outline: 0px;
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 768px) {
   main .review-section .swiper .swiper-wrapper {
     height: 550px;
@@ -646,6 +668,17 @@ main .review-section .swiper .swiper-button-next, main .review-section .swiper .
   }
   main .review-section .swiper .swiper-button-next, main .review-section .swiper .swiper-button-prev {
     color: #002C6A;
+  }
+  main .review-section button {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #002C6A;
+    border: 0px;
+    color: #fff;
+    outline: 0px;
+    margin-bottom: 20px;
   }
 }
 main .about-us {
@@ -693,10 +726,17 @@ main .about-us .wrapper .right {
   padding-top: 50px;
   border-top: 2px groove #002C6A;
 }
-main .about-us .wrapper .right p {
+main .about-us .wrapper .right ul {
+  list-style-type: square;
+}
+main .about-us .wrapper .right ul li {
   color: #000;
   font-weight: 400;
   font-size: 18px;
+  padding-bottom: 20px;
+}
+main .about-us .wrapper .right ul li span {
+  font-weight: 600;
 }
 @media screen and (max-width: 768px) {
   main .about-us {
@@ -931,9 +971,11 @@ footer .footer-container .footer-bottom .right i {
 @media screen and (max-width: 768px) {
   .popup #form-content {
     display: flex;
-    flex-direction: column-reverse;
+    padding: 20px 50px;
+    flex-direction: column;
+    gap: 20px;
     position: absolute;
-    width: 90%;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -943,38 +985,33 @@ footer .footer-container .footer-bottom .right i {
   }
   .popup #form-content .close-btn {
     position: absolute;
-    top: 2px;
+    top: 5px;
     right: 10px;
     cursor: pointer;
     font-size: 40px;
-    color: #fff;
+    color: #002C6A;
   }
-  .popup #form-content .close-btn:hover {
-    color: #456845;
-  }
-  .popup #form-content .left-container {
-    padding: 0px 10px 10px 10px;
-  }
-  .popup #form-content .left-container .flex-row {
+  .popup #form-content .heading {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
   }
-  .popup #form-content .left-container .flex-row .img-container {
-    width: 100%;
-    height: 100px;
+  .popup #form-content .heading .img-container {
+    height: 60px;
   }
-  .popup #form-content .left-container .flex-row .img-container img {
+  .popup #form-content .heading .img-container img {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .popup #form-content .left-container .flex-row h2 {
+  .popup #form-content .heading h2 {
     margin-top: -5px;
     color: #000;
-    font-weight: 400;
+    font-weight: 600;
   }
-  .popup #form-content .left-container form input, .popup #form-content .left-container form textarea {
+  .popup #form-content form input, .popup #form-content form textarea {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
@@ -982,24 +1019,25 @@ footer .footer-container .footer-bottom .right i {
     border: 1px solid rgba(69, 104, 69, 0.4745098039);
     color: #456845;
     outline: none;
+    border-radius: 10px;
   }
-  .popup #form-content .left-container form .check-box {
+  .popup #form-content form .check-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
   }
-  .popup #form-content .left-container form .check-box .check-box-field {
+  .popup #form-content form .check-box .check-box-field {
     display: flex;
     flex-direction: row;
     gap: 0px;
   }
-  .popup #form-content .left-container form .check-box input {
+  .popup #form-content form .check-box input {
     width: 10px;
     height: 10px;
     margin: 0;
   }
-  .popup #form-content .left-container form button {
+  .popup #form-content form button {
     background-color: #002C6A; /* Change button color */
     color: #fff;
     width: 100%;
@@ -1008,40 +1046,14 @@ footer .footer-container .footer-bottom .right i {
     border-radius: 5px;
     cursor: pointer;
   }
-  .popup #form-content .left-container form button:hover {
-    background-color: #456845; /* Change button hover color */
-  }
-  .popup #form-content .right-container {
-    padding-top: 10px;
-    background-color: #002C6A;
-    color: #fff;
-  }
-  .popup #form-content .right-container h2 {
-    font-size: 30px;
-    padding-bottom: 15px;
-  }
-  .popup #form-content .right-container ul {
-    padding-left: 20px;
-    list-style-type: none;
-    text-align: left;
-    line-height: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5px;
-  }
-  .popup #form-content .right-container ul li {
-    font-size: 16px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
+  .popup #form-content form button:hover {
+    background-color: rgba(0, 44, 106, 0.7607843137); /* Change button hover color */
   }
 }
 .popup #thankyou-content {
   display: none;
   position: absolute;
-  width: 450px;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
