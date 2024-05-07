@@ -35,6 +35,20 @@ var swiper = new Swiper(".mySwiper", {
   });
 
   function openPopup() {
+    // Logic to open the popup, e.g., changing visibility, displaying a modal, etc.
+    alert("This is your popup!"); // Example action, you should replace with your popup opening logic
+  }
+  
+  function popUp() {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(openPopup, 15000); // Set a 30-second timer to open the popup
+    });
+  }
+  
+  popUp(); // Call the function to initialize the event listener
+  
+
+  function openPopup() {
     document.getElementById('contact-popup').style.display = 'block';
   }
   
