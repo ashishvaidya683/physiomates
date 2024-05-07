@@ -313,11 +313,12 @@ main .overview .wrapper .left .info {
 main .overview .wrapper .left .info .elem {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   gap: 10px;
 }
 main .overview .wrapper .left .info .elem i {
   font-size: 20px;
+  padding-top: 10px;
 }
 main .overview .wrapper .left .info .elem span {
   font-size: 20px;
