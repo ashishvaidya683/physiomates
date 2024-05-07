@@ -294,6 +294,11 @@ main .overview .wrapper .left h3 {
   line-height: 40px;
   padding-bottom: 15px;
 }
+main .overview .wrapper .left .sub-heading {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
 main .overview .wrapper .left p {
   font-size: 18px;
 }
